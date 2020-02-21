@@ -36,12 +36,17 @@
     .fa-li {
       top: 0.31em;
     }
+    .project {
+      margin: 4px 0px 4px 16px ;
+      line-height: 20px;
+      letter-spacing: 1px;
+    }
     @media screen and (min-width: 768px) {    body {        width: 748px;        margin:10px auto;    }}</style>
     <style id="custom" type="text/css"></style>
   </head>
 <body>
 <hr>
-<h1><span class="fa fa-user"> </span> 胡旭民</h1>
+<h1><span class="fa fa-user"> </span> 胡旭民 / Hu Xumin</h1>
 <h2><span class="fa fa-bug"> </span> java开发工程师</h2>
 <blockquote>
 <p><span class="fa fa-graduation-cap fa-fw"></span>&nbsp; 学历：本科</p>
@@ -76,29 +81,33 @@
 </p>
 <hr>
 <h3><span class="fa fa-bookmark"></span> 项目经历：</h3>
-<p>工作经历说明
-在每特科技公司，从事每特微服务电商项目开发，主要参与项目需求讨论、研发阶段、分布式环境部署、技术难题解决、上线CDN部署等
-参与微服务电商项目核心项目模块的开发，例如：
-会员模块(SSO单点登陆、多端唯一登陆、第三方QQ和微信联合登陆等),活动秒杀模块、商品搜索服务、聚合支付平台的开发等。
-项目技术架构
-A项目核心技术
-1.该项目为微服务电商项目，采用目前比较主流的SpringBoot2+SpringCloud2构建微服务电商项目、使用SpringCloudEureka作为注册中心，实现服务治理
-2.使用Zuul网关框架统一管理微服务请求入口、使用Ribbon实现本地负载均衡器和FeginHttp客户端调用工具
-3.使用Hystrix服务保护框架(服务降级、隔离、熔断、限流)、使用消息总线Stream RabbitMQ和Kafka
-4.使用CAS+JWT实现微服务单点登陆
-B.分部署基础设施解决方案
-1.项目统一使用分布式任务调度平台XXL-Job管理任务调度
-2.使用分布式日志采集系统ELK +kafka实现微服务统一日志管理
-3.分布式事务解决方案LCN 、分布式锁解决方案Zookeeper、Redis
-4.使用分布式配置中心携程阿波罗、高并发分布式全局ID生成雪花算法
-5.分布式Session框架Spring-Session、分布式服务追踪与调用链ZipKin
-C. 项目运营与部署环境
-1.分布式设施环境，统一采用docker安装部署
-2.使用jenkins+docker实现自动部署
-3.微服务API管理ApiSwagger、使用GitLab管理代码
-4.项目使用第三方腾讯云数据库、使用七牛云服务器对静态资源实现加速
-5.构建企业级Maven私服管理微服务接口调用依赖关系
-</p>
+  <h4><span class="fa fa-group fa-fw"></span> 项目名称：soulmate交友论坛</h4>
+  <p class="project">
+    <span class="fa fa-group fa-fw"></span> 项目简介：一款交友互动吐槽软件<br>
+    <span class="fa fa-wrench fa-fw"></span> 开发工具：idea、maven、postman、xshell、sqlyog、nginx等<br>
+    <span class="fa fa-puzzle-piece fa-fw"></span> 开发环境：springboot全家桶、docker、mysql、redis、mongodb、rabbitmq等<br>
+    <span class="fa fa-database fa-fw"></span> 我的职责：主要是用户登录，，使用BCrypt给用户密码加密，使用Token实现无状态登陆，
+    客户端（移动端、PC端、微信端）调用会员服务登陆接口成功后，返回对应的Token令牌，有效期为90天，客户端保存该Token信息，客户端使用令牌关联用户会话信息。
+    使用UUID随机生成Token令牌、用户登陆成功后会生成对应的Token令牌作为key，存入在Redis中，Redis中令牌对应的Value为UserId、有效期为90天。<br>
+  </p>
+  <h4><span class="fa fa-group fa-fw"></span> 项目名称：豫知教育平台</h4>
+  <p class="project">
+    <span class="fa fa-group fa-fw"></span> 项目简介：一款付费在线授课软件<br>
+    <span class="fa fa-wrench fa-fw"></span> 开发工具：MyEclipse、postman、PLsql等<br>
+    <span class="fa fa-puzzle-piece fa-fw"></span> 开发环境：springboot全家桶、docker、oracle、tomcat等<br>
+    <span class="fa fa-database fa-fw"></span> 我的职责：负责数据库的设计和同步，
+    为了提高用户的搜索效率，采用Elasticsearch存放课程信息数据，集成IK分词+PingYin插件，实现拼音和中文分词高效查询。
+    发布/修改/删除/商品的时候，使用Logstash每30s查询一次数据库，转化为json格式后存入Elasticsearch，以MQ异步形式同步到Elasticsearch中，可以实时保证双方数据一致性问题。
+    <br>
+  </p>
+  <h4><span class="fa fa-group fa-fw"></span> 项目名称：sharetasty饭局</h4>
+  <p class="project">
+    <span class="fa fa-group fa-fw"></span> 项目简介：一款组织饭局好友聚会软件<br>
+    <span class="fa fa-wrench fa-fw"></span> 开发工具：idea、maven、xshell、plsql等<br>
+    <span class="fa fa-puzzle-piece fa-fw"></span> 开发环境：springboot全家桶、freemarker、oracle、jpa、rabbitmq等<br>
+    <span class="fa fa-database fa-fw"></span> 我的职责：负责用户注册，搭建阿里云短信微服务，使用rabbitmq异步执行事务，避免造成阻塞，
+    增强用户体验。<br>
+  </p>
 <hr>
 <h3><span class="fa fa-bookmark"></span> 教育经历：</h3>
 <blockquote>
